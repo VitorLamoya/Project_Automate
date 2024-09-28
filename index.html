@@ -119,7 +119,7 @@
             event.preventDefault(); // Evita o envio do formulário
 
             // Seleciona todos os inputs e selects
-            const inputs = document.querySelectorAll('input[type="text"], input[type="radio"], input[type="checkbox"], select:not([name="submit"])');
+            const inputs = document.querySelectorAll('input[type="text"], input[type="radio"], input[type="email"], input[type="number"], input[type="checkbox"], select:not([name="submit"])');
             inputs.forEach(input => {
                 if (input.type === 'checkbox' || input.type === 'radio') {
                     input.checked = false; // Limpa checkboxes e radios
