@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <title>Home - Grupo GPS</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="img-menu">
+            <img src="images/logo_gps.png">
+        </div>
+        <div class="itens-menu">
+            <a>QUEM SOMOS</a>
+            <a>NOSSOS PILARES</a>
+            <a>NOSSAS SOLUÇÕES</a>
+            <a>INVESTIDORES</a>
+            <a>EXTRANET</a>
+            <a>TRABALHE CONOSCO</a>
+            <button class="but">SOLICITAR PROPOSTA</button>
+            <img src="images/en.jpg">
+        </div>
+    </div>
+    <div class="corpo">
+        <div class="cadastro">
+            <h2>CADASTRAR CLIENTE</h2>
+            <div class="formularios">
+                <p>Tipo de cliente</p>
+                <div class="form-checkbox">
+                    <input type="radio" name="opcao" onclick="checkRadio(this)">
+                    <p>Pessoa Física</p>
+                    <input type="radio" name="opcao" onclick="checkRadio(this)">
+                    <p>Pessoa Jurídica</p>
+                </div>
+                <div class="form-inputs">
+                    <input type="text" placeholder="Nome completo*"
+                    onmousedown="alterInputNasc(this,'Ex: Vitor Lamoya')" 
+                    onmouseleave="resetInputNasc(this,'Nome completo*')">
+                    <input type="text" placeholder="CPF*"
+                    onmousedown="alterInputNasc(this,'Ex: 18315768472')" 
+                    onmouseleave="resetInputNasc(this,'CPF*')">
+                    <select id="opcoesGenero" name="opcoesGenero">
+                        <option value="opcao1">Gênero*</option>
+                        <option value="opcao2">Masculino</option>
+                        <option value="opcao3">Feminino</option>
+                    </select>
+                    <input type="text" name="inputDnasc" placeholder="Data de nascimento" 
+                    onmousedown="alterInputNasc(this,'dd/MM/AAAA')" 
+                    onmouseleave="resetInputNasc(this,'Data de nascimento*')">
+                    <input type="text" name="inputTelefone" placeholder="Telefone celular*" 
+                    onmousedown="alterInputNasc(this,'Ex: 21977076044')" 
+                    onmouseleave="resetInputNasc(this,'Telefone celular*')">
+                    <input type="text" name="inputEmail" placeholder="E-mail*" 
+                    onmousedown="alterInputNasc(this,'email@email.com.br')" 
+                    onmouseleave="resetInputNasc(this,'E-mail*')">
+                    <input type="text" name="inputNomeMae" placeholder="Nome da mãe*" 
+                    onmousedown="alterInputNasc(this,'Ex: Maria Joaquim dos Santos')" 
+                    onmouseleave="resetInputNasc(this,'Nome da mãe*')">
+                    <input type="text" name="inputNomePai" placeholder="Nome do pai" 
+                    onmousedown="alterInputNasc(this,'Ex: Adalberto dos Santos')" 
+                    onmouseleave="resetInputNasc(this,'Nome do pai')">
+                    <select id="opcoesEmpresa" name="opcoesEmpresa">
+                        <option value="opcao1">Empresa*</option>
+                        <option value="opcao2">GPS TEC SISTEMAS ELETRONICOS DE SEGURANCA LTDA</option>
+                        <option value="opcao3">TOP SERVICE SERVICOS E SISTEMAS S/A</option>
+                        <option value="opcao4">IN-HAUS INDUSTRIAL E SERVICOS DE LOGISTICA S.A</option>
+                    </select>
+                    <select id="opcoesCargo" name="opcoesCargo">
+                        <option value="opcao1">Cargo*</option>
+                        <option value="opcao2">Estagiário de T.I</option>
+                        <option value="opcao3">Analista de Sistemas Jr</option>
+                        <option value="opcao4">Analista de Sistemas Pleno</option>
+                        <option value="opcao5">Analista de Sistemas Senior</option>
+                        <option value="opcao6">Gerente de T.I</option>
+                    </select>
+                    <input type="number" name="inputCEP" placeholder="CEP*" 
+                    onmousedown="alterInputNasc(this,'22723393')" 
+                    onmouseleave="resetInputNasc(this,'CEP*')">
+                    <input type="email" name="inputEndereco" placeholder="Endereço*" 
+                    onmousedown="alterInputNasc(this,'Ex: Rua das Oliveiras')" 
+                    onmouseleave="resetInputNasc(this,'Endereço*')">
+                    <input type="number" name="inputNumero" placeholder="Número*" 
+                    onmousedown="alterInputNasc(this,'Ex: 1605')" 
+                    onmouseleave="resetInputNasc(this,'Número*')">
+                    <input type="email" name="inputComplemento" placeholder="Complemento" 
+                    onmousedown="alterInputNasc(this,'Ex: Casa 1')" 
+                    onmouseleave="resetInputNasc(this,'Complemento')">
+                </div>
+                <div class="desc-final">
+                    <p>(*) Campos obrigatórios</p>
+                    <p>(!) Todos os dados/Parâmetros utilizados são de natureza fictícia, apenas para aprendizado.</p>
+                </div>
+                <div class="submit-infos">
+                    <input type="submit" value="Cadastrar cliente" onclick="limparFormulario(event)">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function checkRadio(current) {
+            const radios = document.getElementsByName('opcao');
+            radios.forEach(radio => {
+                if (radio !== current) {
+                    radio.checked = false;
+                }
+            });
+        }
+
+        function alterInputNasc(input,txtPos) {
+            input.placeholder = txtPos;
+        }
+
+        function resetInputNasc(input,txtAntes) {
+            input.placeholder = txtAntes;
+        }
+
+        function limparFormulario(event) {
+            event.preventDefault(); // Evita o envio do formulário
+
+            // Seleciona todos os inputs e selects
+            const inputs = document.querySelectorAll('input[type="text"], input[type="radio"], input[type="checkbox"], select:not([name="submit"])');
+            inputs.forEach(input => {
+                if (input.type === 'checkbox' || input.type === 'radio') {
+                    input.checked = false; // Limpa checkboxes e radios
+                }else {
+                    input.value = ''; // Limpa inputs de texto
+                }
+            });
+        }
+    </script>
+</body>
+</html>
