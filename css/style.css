@@ -153,3 +153,21 @@ body {
     border-radius: 2px;
     background-color: #002D4E;
 }
+
+@media screen and (max-width: 480px) {
+    .itens-menu {
+        display: none;
+    }
+    .form-checkbox {
+        width: 100%;
+    }
+    .form-inputs input[type="text"],select {
+        width: 100%;
+    }
+    .form-inputs input[type="number"] {
+        width: 100%;
+    }
+    .form-inputs input[type="email"] {
+        width: 100%;
+    }
+}
