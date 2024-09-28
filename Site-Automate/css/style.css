@@ -1,0 +1,155 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px; 
+    background-color: #FAF7F2;
+}
+
+.menu {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    padding-left: 30px;
+    background-color: #F2F3F8;
+}
+
+.img-menu {
+    width: 25%;
+    height: 60%;
+    margin-top: 15px;
+}
+
+.itens-menu {
+    width: 75%;
+    height: 100%;
+    padding-top: 25px;
+}
+.itens-menu a {
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    font-size: 13.2px;
+    font-family: "Barlow", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0;
+    color: #002D4E;
+}
+.itens-menu img {
+    margin-left: 30px;
+    padding-top: 5px;
+    position:absolute;
+}
+
+.but {
+    height: 60%;
+    padding: 5px;
+    font-size: 11px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-color: #002D4E;
+}
+
+.corpo {
+    width: 100%;
+    height: 100dvh;
+}
+
+.cadastro {
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+.cadastro h2 {
+    padding-top: 40px;
+    font-size: 21px;
+    color: #002D4E;
+}
+
+.formularios {
+    width: 100%;
+    height: 80%;
+    margin-top: 35px;
+    font-size: 16px;
+    color: #777979;
+    text-align: left;
+}
+
+.form-checkbox {
+    margin-top: 7px;
+    display: flex;
+    border-bottom: 1px solid #d5d6d6;
+}
+.form-checkbox input {
+    width: 15px;
+    margin-right: 5px;
+    margin-bottom: 12px;
+    border-radius: 50px;
+}
+.form-checkbox p {
+    margin-right: 25px;
+    margin-bottom: 12px;
+}
+
+.form-inputs {
+    width: 100%;
+    display: inline;
+}
+.form-inputs input[type="text"],select {
+    width: 45%;
+    height: 40px;
+    margin-top: 15px;
+    margin-inline-end: 30px;
+    padding: 15px;
+    font-size: 14px;
+}
+.form-inputs input[type="number"] {
+    width: 30%;
+    height: 40px;
+    margin-top: 15px;
+    margin-inline-end: 30px;
+    padding: 15px;
+    font-size: 14px;
+}
+.form-inputs input[type="email"] {
+    width: 60%;
+    height: 40px;
+    margin-top: 15px;
+    margin-inline-end: 30px;
+    padding: 15px;
+    font-size: 14px;
+}
+.form-inputs select {
+    padding: 0;
+    padding-left: 12px;
+    color: #777979;
+}
+
+.desc-final {
+    width: 100%;
+    margin-top: 15px;
+}
+.desc-final p {
+    margin-top: 5px;
+}
+
+.submit-infos {
+    width: 100%;
+}
+.submit-infos input[type="submit"] {
+    width: 95%;
+    height: 50px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+    border-radius: 2px;
+    background-color: #002D4E;
+}
